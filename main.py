@@ -1,86 +1,119 @@
-for x in "Rahul":
-    print(x)
+#Tuple
+tup1= (18, 18.09,"Hello",[97,99],{2,21},{1:"Hello", 2:"Hello"})
+print(tup1)
 
-a = list(range(0,12,2))
+tup1=(25,45,89,36,41,23,65,47,45,65,91,86,60)
+print(tup1[3:7])
+print(tup1[-1:-6:-1])
+
+# len()----gives lenght of tuple
+tup1=(45,32,56,578,96,58,6965,85,79,89)
+a=len(tup1)
 print(a)
 
-l1 = list(range(10,20,2))
-for i in l1:
-    if i == 14:
-     continue
-    print(i) 
+# min()---gives minimum value of a tuple
+tup1=(22,35,26,375,33,58,2,85)
+a=min(tup1)
+print(a)
 
-l2 = ["Rahul", "Asha","Dhruvi"]
-for x in l2:
-    if x=="Asha":
-      continue
-    print(x)
+tup1=("Hello","Dict","appkle","world")
+a=min(tup1)
+print(a)
 
-l = [1,2,3,4]
-for i in l:
-    if i ==4:
-        continue
-    print(i)
+# max()---gives maximum value of a tuple
+tup1=(22,35,26,375,33,58,2,85)
+a=max(tup1)
+print(a)
 
-l1 = [1,2,3,4,5,6]
-for x in l1:
-     if  x== 3:
-          x += 1
-          break
-print(x)
+# tuple(iterable)
+tup1=tuple(range(100,125,4))
+tup1=tuple("hrjkiuf jhr")
+tup1=tuple([45,25,36,58])
+tup1=tuple({45,58,96,58,74,5})
+tup1=tuple({1:"Hello","wow":"great"})
+print(tup1)
 
-l2 = list(range(26,50,2))
-for a in l2:
-    if a ==40:
-        break
-    print(a)
 
-l1 = ["Rahul","Bobby","Shivang"]
-for x in l1:
-    if x=="Bobby":
-     break
-    print(x)
+# index(element)---gives index of first occurence of element
+tup1=(45,87,96,58,41,23,45,65,25,63)
+tup1.index(45)
+# tup1.index(45874)
 
-for x in range (15):
-    print(x)
+#Set
 
-for x in range (6):
-    if x == 7:
-        break
-    print(x)
-else: 
-  print("Finished")
+Set1 = {35, 36, 33, 45, 55, 46, 67}
+print(type(Set1))
 
-for  x in range (5,10):
-    if x == 9:
-        break
-    print(x)
-else:
-    print("finished")
+Set1 = {35, 36, 33, 45, 55, 46,67 , 36, 35, 45, 35}
+print(Set1)
 
-adj = ["red", "Green", "Blue"]
-fruits = ["Mango", "Banana", "Apple"]
-for x in adj:
-    for y in fruits:
-        print(x,)
+t1 ={1,2,3,4,5,6,1,2,3}
+print(t1)
+print(type(t1))
 
-While Loop
-x = 3
-while x < 6:
-    print(x)
-    x += 1
+set1={45,25,63,25}
+set1.add("RahulB")
+print(set1)
 
-i = 1
-while i < 6:
-    print(i)
-    if i == 3:
-        break
-    i += 1
+set1={45,25,63,25}
+set1.add("xyz")
+print(set1)
 
-i = 0
-while i < 6:
-    i += 1
-    if i == 3:
-        continue
-    print(i)
+set1={45,65,87,45,8}
+set1.clear()
+print(set1)
 
+set1={45,25,65,87,8}
+set1.pop()
+print(set1)
+
+set1={45,65,87,458,45,87,45,98,54,56,36}
+print(set1)
+set1.remove(45)
+print(set1)
+
+s2 = set(range(12,20))
+print(s2)
+s2.remove(17)
+print(s2)
+
+set1={45,25,41,25,48,75,96,8}
+set2={"hello","world"}
+set3=set1.union(set2)
+print(set1)
+print(set2)
+print(set3)
+
+s6 = set(range(25,50))
+s7 = {3,4,45,49,38,56, 57,67}
+print(s6)
+print(s7)
+s8 = s6.intersection(s7)
+print(s8)
+
+set1={45,25,45,65,25}
+set2={45,36,58,978}
+print(set1.intersection(set2))
+
+a = {45,67,89,90,92} ## it will remove the common values from your sets
+b = {45,67,90,91}
+a.difference_update(b)
+print(a)
+
+a={45,25,45,869,45}
+a.discard(869)
+print(a)
+
+a={1,2,3,4,5}
+b={6,7,8,9}
+c=a.isdisjoint(b)
+print(c)
+
+a = set(range(1,6))
+b = set(range(7,10))
+c = a.isdisjoint(b) ## if condition is fuulfling then false other true
+print(c)
+
+a={45,25,36,58}
+a.update(range(4,10))
+print(a)
